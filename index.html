@@ -1,0 +1,72 @@
+    <!DOCTYPE html>
+    <html lang="es">
+        <head>
+            <meta charset="UTF-8">
+            <meta http-equiv="X-UA-Compatible" content="IE=edge">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Starbucks Website Landing Page</title>
+            <link rel="stylesheet" href="styles.css">
+            <link rel="icon" type="image/png" href="./img/logo.png">
+        </head>
+
+        <body>
+            <section>
+                <div class="circle"></div>
+                <header>
+                    <a href="#"> <img src="./img/logo.png" class="logo"></a>
+
+                    <div class="toggle" onclick="toggleMenu();"></div>
+
+                        <ul>
+                            <li><a href="#">Home</a></li>
+                            <li><a href="#">Menu</a></li>
+                            <li><a href="#">Productos</a></li>
+                            <li><a href="#">Contacto</a></li>
+                        </ul>
+                </header>
+                <div class="content">
+                    <div class="textBox">
+                        <h2> No es sólo café, <br> es <span>Starbucks</span></h2>
+                        <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum, atque impedit. 
+                            Hic, illo? Dolorum, laudantium commodi tenetur nesciunt inventore quod magnam 
+                            vero, numquam iste assumenda voluptatem laborum totam sint quidem?</p>
+                        <a href="#">Ver más</a>    
+                    </div>
+                </div>
+
+                <div class="imgBox">
+                    <img src="./img/img1.png" class="starbucks">
+                </div>
+
+                <ul class="thumb">
+                    <li><img src="./img/thumb1.png" onclick="imgSlider('./img/img1.png')"></li>
+                    <li><img src="./img/thumb2.png" onclick="imgSlider('./img/img2_mejo.png')"></li>
+                    <li><img src="./img/thumb3.png" onclick="imgSlider('./img/img3.png')"></li>
+                </ul>   
+
+                <ul class="sci">
+                    <li><a href="#"><img src="./img/facebook.png"></a></li>
+                    <li><a href="#"><img src="./img/instagram.png"></a></li>
+                    <li><a href="#"><img src="./img/twitter.png"></a></li>
+                </ul>
+            </section>
+
+            <script type="text/javascript">
+                function imgSlider(anything) {
+                    document.querySelector('.starbucks').src = anything;
+                }
+
+
+                function toggleMenu(){
+                var menuToggle = document.querySelector('.toggle');
+                var navigation = document.querySelector('.navigation');
+                menuToggle.classList.toggle('active');
+                navigation.classList.toggle('active');
+            }
+
+            </script>
+
+
+        </body>
+
+    </html>
